@@ -10,7 +10,18 @@ A Streamlit dashboard that turns a Codeforces submission history into focused pr
 - **Mock contest timer** with configurable contest lengths, pause, and reset controls.
 - Five-minute API caching to be respectful of the public Codeforces API.
 
-## Quick start
+## Launch the app
+
+After downloading or cloning the repository:
+
+- **macOS:** double-click `Launch Practice Lab.command`.
+- **Windows:** double-click `Launch Practice Lab.bat`.
+
+The launcher creates an isolated Python environment, installs anything missing, and opens the dashboard. The first launch can take a minute; later launches are faster. Python 3 must be installed.
+
+If macOS blocks the launcher, right-click it, choose **Open**, then confirm once.
+
+## Terminal option
 
 ```bash
 python3 -m venv .venv
