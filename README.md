@@ -2,6 +2,46 @@
 
 A Streamlit dashboard that turns a Codeforces submission history into focused practice.
 
+# macOS — copy these commands into Terminal
+
+Install [Python 3](https://www.python.org/downloads/) and [Git](https://git-scm.com/downloads) first. Then open **Terminal**, paste this entire block, and press Return:
+
+```bash
+git clone https://github.com/seveneqq1/codeforces-practice-analytics.git
+cd codeforces-practice-analytics
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m streamlit run app.py
+```
+
+# Windows — copy these commands into PowerShell
+
+Install [Python 3](https://www.python.org/downloads/) and [Git](https://git-scm.com/downloads) first. Then open **PowerShell**, paste this entire block, and press Enter:
+
+```powershell
+git clone https://github.com/seveneqq1/codeforces-practice-analytics.git
+cd codeforces-practice-analytics
+py -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python -m streamlit run app.py
+```
+
+The dashboard should open automatically at `http://localhost:8501`. Enter any public Codeforces handle in the sidebar; no API key is required. Press `Ctrl+C` in the terminal to stop it.
+
+## Open it again later
+
+You only need the full setup once. On macOS, open Terminal in the project folder and run:
+
+```bash
+.venv/bin/python -m streamlit run app.py
+```
+
+On Windows, open PowerShell in the project folder and run:
+
+```powershell
+.venv\Scripts\python -m streamlit run app.py
+```
+
 ## Features
 
 - **Rating vs. time-to-solve heat map** based on the interval between a problem's first submission and first accepted submission.
@@ -9,28 +49,6 @@ A Streamlit dashboard that turns a Codeforces submission history into focused pr
 - **Personalized problem sets** targeting weak topics within ±100 of a chosen rating.
 - **Mock contest timer** with configurable contest lengths, pause, and reset controls.
 - Five-minute API caching to be respectful of the public Codeforces API.
-
-## Launch the app
-
-After downloading or cloning the repository:
-
-- **macOS:** double-click `Launch Practice Lab.command`.
-- **Windows:** double-click `Launch Practice Lab.bat`.
-
-The launcher creates an isolated Python environment, installs anything missing, and opens the dashboard. The first launch can take a minute; later launches are faster. Python 3 must be installed.
-
-If macOS blocks the launcher, right-click it, choose **Open**, then confirm once.
-
-## Terminal option
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Then enter any public Codeforces handle in the sidebar. No API key is required.
 
 ## Development
 
